@@ -1,0 +1,180 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>New Contact – Employee Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-icon">👥</div>
+        <h1>Employee<br />Management</h1>
+        <p>System v1.0</p>
+      </div>
+      <nav class="sidebar-nav">
+        <span class="nav-label">Menu</span>
+        <a href="index.html" class="nav-link">
+          <span class="nav-icon">🏠</span> Home
+        </a>
+        <a href="new-contact.html" class="nav-link active">
+          <span class="nav-icon">➕</span> New Contact
+        </a>
+        <a href="view-contacts.html" class="nav-link">
+          <span class="nav-icon">👁️</span> View All Contacts
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <p>© 2025 EMS · All rights reserved</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h2>New Contact</h2>
+        <div class="topbar-actions">
+          <a href="view-contacts.html" class="btn btn-outline btn-sm"
+            >← Back to Contacts</a
+          >
+        </div>
+      </div>
+
+      <div class="page-content">
+        <div class="page-header">
+          <div class="page-header-text">
+            <h2>Add New Employee</h2>
+            <p>
+              Fill in the details below to add a new employee contact to the
+              system.
+            </p>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Employee Contact Form</h3>
+            <span class="badge badge-blue">New Record</span>
+          </div>
+
+          <div class="form-grid" id="contactForm">
+            <div class="form-section-title">Personal Information</div>
+
+            <div class="form-group">
+              <label for="idNumber">ID Number</label>
+              <input type="text" id="idNumber" placeholder="Enter ID Number" />
+            </div>
+
+            <div class="form-group">
+              <label>Gender</label>
+              <div class="radio-group">
+                <label class="radio-label">
+                  <input type="radio" name="gender" value="Male" /> Male
+                </label>
+                <label class="radio-label">
+                  <input type="radio" name="gender" value="Female" /> Female
+                </label>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="firstName">First Name</label>
+              <input
+                type="text"
+                id="firstName"
+                placeholder="Enter First Name"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="lastName">Last Name</label>
+              <input type="text" id="lastName" placeholder="Enter Last Name" />
+            </div>
+
+            <div class="form-group">
+              <label for="dob">Date of Birth</label>
+              <input type="date" id="dob" />
+            </div>
+
+            <div class="form-group">
+              <label for="address">Address</label>
+              <input type="text" id="address" placeholder="Enter Address" />
+            </div>
+
+            <div class="form-section-title">Contact Information</div>
+
+            <div class="form-group">
+              <label for="email">Email Address</label>
+              <input
+                type="email"
+                id="email"
+                placeholder="Enter Email Address"
+              />
+            </div>
+
+            <div class="form-group">
+              <label for="phone">Phone Number</label>
+              <input type="tel" id="phone" placeholder="+254 7XX XXX XXX" />
+            </div>
+
+            <div class="form-section-title">Employment Information</div>
+
+            <div class="form-group">
+              <label for="department">Department</label>
+              <select id="department">
+                <option value="">— Select Department —</option>
+                <option>Engineering</option>
+                <option>Human Resources</option>
+                <option>Finance</option>
+                <option>Marketing</option>
+                <option>Operations</option>
+                <option>Sales</option>
+                <option>IT</option>
+              </select>
+            </div>
+
+            <div class="form-group">
+              <label for="position">Position</label>
+              <select id="position">
+                <option value="">— Select Position —</option>
+                <option>Software Engineer</option>
+                <option>Project Manager</option>
+                <option>HR Officer</option>
+                <option>Accountant</option>
+                <option>Marketing Analyst</option>
+                <option>Operations Manager</option>
+                <option>Sales Executive</option>
+                <option>IT Support</option>
+                <option>Director</option>
+                <option>Intern</option>
+              </select>
+            </div>
+
+            <div class="form-actions">
+              <button
+                type="button"
+                class="btn btn-outline"
+                onclick="resetForm()"
+              >
+                🗑️ Clear Form
+              </button>
+              <button
+                type="button"
+                class="btn btn-success"
+                onclick="submitForm()"
+              >
+                ✅ Save Contact
+              </button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div class="toast success" id="toast">
+      <span>✅</span> <span id="toastMsg">Contact saved successfully!</span>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>

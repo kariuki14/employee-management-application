@@ -1,0 +1,115 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Employee Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-icon">👥</div>
+        <h1>Employee<br />Management</h1>
+        <p>System v1.0</p>
+      </div>
+      <nav class="sidebar-nav">
+        <span class="nav-label">Menu</span>
+        <a href="index.html" class="nav-link active">
+          <span class="nav-icon">🏠</span> Home
+        </a>
+        <a href="new-contact.html" class="nav-link">
+          <span class="nav-icon">➕</span> New Contact
+        </a>
+        <a href="view-contacts.html" class="nav-link">
+          <span class="nav-icon">👁️</span> View All Contacts
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <p>© 2025 EMS · All rights reserved</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h2>Dashboard</h2>
+        <div class="topbar-actions">
+          <span class="badge badge-green">● System Online</span>
+        </div>
+      </div>
+
+      <div class="page-content">
+        <div class="welcome-banner">
+          <div>
+            <h3>Welcome to Employee Management System</h3>
+            <p>
+              Manage your workforce with ease. Add new employee contacts, view
+              existing records, and keep your team information organised and up
+              to date — all in one place.
+            </p>
+          </div>
+          <a href="new-contact.html" class="btn btn-primary">
+            ➕ Add New Employee
+          </a>
+        </div>
+
+        <div class="stats-grid">
+          <div class="stat-card blue">
+            <div class="stat-icon">👥</div>
+            <div class="stat-value">5</div>
+            <div class="stat-label">No. of Departments</div>
+          </div>
+          <div class="stat-card green">
+            <div class="stat-icon">📋</div>
+            <div class="stat-value">50</div>
+            <div class="stat-label">No. of Contacts</div>
+          </div>
+          <div class="stat-card yellow">
+            <div class="stat-icon">🏷️</div>
+            <div class="stat-value">12</div>
+            <div class="stat-label">No. of Positions</div>
+          </div>
+          <div class="stat-card red">
+            <div class="stat-icon">🆕</div>
+            <div class="stat-value">3</div>
+            <div class="stat-label">New This Month</div>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-header">
+            <h3 class="card-title">Quick Actions</h3>
+          </div>
+          <div style="display: flex; gap: 12px; flex-wrap: wrap">
+            <a href="new-contact.html" class="btn btn-primary"
+              >➕ Add New Contact</a
+            >
+            <a href="view-contacts.html" class="btn btn-outline"
+              >📋 View All Contacts</a
+            >
+          </div>
+        </div>
+
+        <div class="card" style="margin-top: 20px">
+          <div class="card-header">
+            <h3 class="card-title">About This System</h3>
+          </div>
+          <p
+            style="color: var(--text-muted); font-size: 14px; line-height: 1.7"
+          >
+            The
+            <strong style="color: var(--text)"
+              >Employee Management System</strong
+            >
+            is a web-based application built with HTML, CSS, and JavaScript. It
+            allows administrators to manage employee contact information
+            including names, departments, positions, phone numbers, and email
+            addresses. Use the navigation on the left to move between pages.
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script src="main.js"></script>
+  </body>
+</html>

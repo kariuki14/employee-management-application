@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>View Contacts – Employee Management System</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <aside class="sidebar">
+      <div class="sidebar-brand">
+        <div class="logo-icon">👥</div>
+        <h1>Employee<br />Management</h1>
+        <p>System v1.0</p>
+      </div>
+      <nav class="sidebar-nav">
+        <span class="nav-label">Menu</span>
+        <a href="index.html" class="nav-link">
+          <span class="nav-icon">🏠</span> Home
+        </a>
+        <a href="new-contact.html" class="nav-link">
+          <span class="nav-icon">➕</span> New Contact
+        </a>
+        <a href="view-contacts.html" class="nav-link active">
+          <span class="nav-icon">👁️</span> View All Contacts
+        </a>
+      </nav>
+      <div class="sidebar-footer">
+        <p>© 2025 EMS · All rights reserved</p>
+      </div>
+    </aside>
+
+    <main class="main">
+      <div class="topbar">
+        <h2>All Contacts</h2>
+        <div class="topbar-actions">
+          <a href="new-contact.html" class="btn btn-primary btn-sm"
+            >➕ Add New</a
+          >
+        </div>
+      </div>
+
+      <div class="page-content">
+        <div class="page-header">
+          <div class="page-header-text">
+            <h2>Employee Directory</h2>
+            <p>
+              A full list of all registered employee contacts in the system.
+            </p>
+          </div>
+          <span class="badge badge-blue">5 Records</span>
+        </div>
+
+        <div class="card">
+          <div class="table-wrapper">
+            <table id="contactsTable">
+              <thead>
+                <tr>
+                  <th>No.</th>
+                  <th>Name</th>
+                  <th>Email</th>
+                  <th>Phone</th>
+                  <th>Department</th>
+                  <th>Actions</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td class="td-number">1</td>
+                  <td class="employee-name">Ann Mutiga</td>
+                  <td>ann.mutiga@ems.co.ke</td>
+                  <td>+254 712 345 678</td>
+                  <td><span class="employee-dept">Engineering</span></td>
+                  <td class="actions-cell">
+                    <button
+                      class="btn btn-info btn-sm"
+                      onclick="
+                        viewDetails(
+                          'Ann Mutiga',
+                          'ann.mutiga@ems.co.ke',
+                          '+254 712 345 678',
+                          'Engineering',
+                          'Software Engineer',
+                        )
+                      "
+                    >
+                      👁 Details
+                    </button>
+                    <button
+                      class="btn btn-warning btn-sm"
+                      onclick="editContact('Ann Mutiga')"
+                    >
+                      ✏️ Edit
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      onclick="deleteContact('Ann Mutiga')"
+                    >
+                      🗑 Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-number">2</td>
+                  <td class="employee-name">Carren Nyaboke</td>
+                  <td>carren.nyaboke@ems.co.ke</td>
+                  <td>+254 723 456 789</td>
+                  <td>
+                    <span
+                      class="employee-dept"
+                      style="
+                        background: rgba(52, 211, 153, 0.1);
+                        color: var(--accent-2);
+                      "
+                      >HR</span
+                    >
+                  </td>
+                  <td class="actions-cell">
+                    <button
+                      class="btn btn-info btn-sm"
+                      onclick="
+                        viewDetails(
+                          'Carren Nyaboke',
+                          'carren.nyaboke@ems.co.ke',
+                          '+254 723 456 789',
+                          'Human Resources',
+                          'HR Officer',
+                        )
+                      "
+                    >
+                      👁 Details
+                    </button>
+                    <button
+                      class="btn btn-warning btn-sm"
+                      onclick="editContact('Carren Nyaboke')"
+                    >
+                      ✏️ Edit
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      onclick="deleteContact('Carren Nyaboke')"
+                    >
+                      🗑 Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-number">3</td>
+                  <td class="employee-name">Cecilia Nyokabi Njoroge</td>
+                  <td>cecilia.njoroge@ems.co.ke</td>
+                  <td>+254 734 567 890</td>
+                  <td>
+                    <span
+                      class="employee-dept"
+                      style="
+                        background: rgba(251, 191, 36, 0.1);
+                        color: var(--warning);
+                      "
+                      >Finance</span
+                    >
+                  </td>
+                  <td class="actions-cell">
+                    <button
+                      class="btn btn-info btn-sm"
+                      onclick="
+                        viewDetails(
+                          'Cecilia Nyokabi Njoroge',
+                          'cecilia.njoroge@ems.co.ke',
+                          '+254 734 567 890',
+                          'Finance',
+                          'Accountant',
+                        )
+                      "
+                    >
+                      👁 Details
+                    </button>
+                    <button
+                      class="btn btn-warning btn-sm"
+                      onclick="editContact('Cecilia Nyokabi Njoroge')"
+                    >
+                      ✏️ Edit
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      onclick="deleteContact('Cecilia Nyokabi Njoroge')"
+                    >
+                      🗑 Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-number">4</td>
+                  <td class="employee-name">Charles Onyango</td>
+                  <td>charles.onyango@ems.co.ke</td>
+                  <td>+254 745 678 901</td>
+                  <td><span class="employee-dept">Engineering</span></td>
+                  <td class="actions-cell">
+                    <button
+                      class="btn btn-info btn-sm"
+                      onclick="
+                        viewDetails(
+                          'Charles Onyango',
+                          'charles.onyango@ems.co.ke',
+                          '+254 745 678 901',
+                          'Engineering',
+                          'Project Manager',
+                        )
+                      "
+                    >
+                      👁 Details
+                    </button>
+                    <button
+                      class="btn btn-warning btn-sm"
+                      onclick="editContact('Charles Onyango')"
+                    >
+                      ✏️ Edit
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      onclick="deleteContact('Charles Onyango')"
+                    >
+                      🗑 Delete
+                    </button>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="td-number">5</td>
+                  <td class="employee-name">Christine Mogeni</td>
+                  <td>christine.mogeni@ems.co.ke</td>
+                  <td>+254 756 789 012</td>
+                  <td>
+                    <span
+                      class="employee-dept"
+                      style="
+                        background: rgba(248, 113, 113, 0.1);
+                        color: var(--danger);
+                      "
+                      >Marketing</span
+                    >
+                  </td>
+                  <td class="actions-cell">
+                    <button
+                      class="btn btn-info btn-sm"
+                      onclick="
+                        viewDetails(
+                          'Christine Mogeni',
+                          'christine.mogeni@ems.co.ke',
+                          '+254 756 789 012',
+                          'Marketing',
+                          'Marketing Analyst',
+                        )
+                      "
+                    >
+                      👁 Details
+                    </button>
+                    <button
+                      class="btn btn-warning btn-sm"
+                      onclick="editContact('Christine Mogeni')"
+                    >
+                      ✏️ Edit
+                    </button>
+                    <button
+                      class="btn btn-danger btn-sm"
+                      onclick="deleteContact('Christine Mogeni')"
+                    >
+                      🗑 Delete
+                    </button>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </div>
+      </div>
+    </main>
+
+    <div
+      id="detailsModal"
+      style="
+        display: none;
+        position: fixed;
+        inset: 0;
+        background: rgba(0, 0, 0, 0.6);
+        z-index: 200;
+        align-items: center;
+        justify-content: center;
+      "
+    >
+      <div
+        style="
+          background: var(--surface);
+          border: 1px solid var(--border);
+          border-radius: var(--radius);
+          padding: 28px;
+          width: 420px;
+          max-width: 90%;
+        "
+      >
+        <h3
+          style="
+            font-family: &quot;Syne&quot;, sans-serif;
+            font-weight: 800;
+            margin-bottom: 20px;
+          "
+        >
+          👤 Employee Details
+        </h3>
+        <div
+          id="detailsContent"
+          style="
+            display: flex;
+            flex-direction: column;
+            gap: 12px;
+            font-size: 14px;
+          "
+        ></div>
+        <div style="margin-top: 24px; text-align: right">
+          <button class="btn btn-outline" onclick="closeModal()">Close</button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
