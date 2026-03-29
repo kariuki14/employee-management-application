@@ -626,6 +626,36 @@ tbody td {
   line-height: 1.6;
 }
 
+.sidebar-logo {
+  width: 48px;
+  height: 48px;
+  border-radius: 12px;
+  margin-bottom: 12px;
+  display: block;
+}
+
+.avatar {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-size: 11px;
+  font-weight: 700;
+  color: #fff;
+  margin-right: 8px;
+  vertical-align: middle;
+  flex-shrink: 0;
+  letter-spacing: 0.03em;
+}
+
+.employee-name {
+  display: flex;
+  align-items: center;
+  font-weight: 500;
+}
+
 ::-webkit-scrollbar {
   width: 6px;
   height: 6px;
